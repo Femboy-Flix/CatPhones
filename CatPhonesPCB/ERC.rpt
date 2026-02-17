@@ -1,0 +1,74 @@
+ERC-Bericht (2026-02-15T00:47:38+0100, UTF8-kodiert)
+
+***** Schaltplan /
+[power_pin_not_driven]: Input-Power-Pin wird von keinem Output-Power-Pin angesteuert
+    ; error
+    @(1400 mils, 7000 mils): Symbol #PWR06 Pin 1 [Stromversorgung, Linie]
+[power_pin_not_driven]: Input-Power-Pin wird von keinem Output-Power-Pin angesteuert
+    ; error
+    @(1400 mils, 7100 mils): Symbol #PWR01 Pin 1 [Stromversorgung, Linie]
+[lib_symbol_issues]: Symbol "USB_C_Receptacle_USB2.0" nicht in Bibliothek "Connector" gefunden
+    ; warning
+    @(6100 mils, 1600 mils): Symbol J13 [USB_C_Receptacle_USB2.0]
+[lib_symbol_mismatch]: Symbol "R_Small" stimmt nicht mit Kopie in Bibliothek "Device" überein
+    ; warning
+    @(7300 mils, 1400 mils): Symbol R1 [R_Small]
+[lib_symbol_mismatch]: Symbol "R_Small" stimmt nicht mit Kopie in Bibliothek "Device" überein
+    ; warning
+    @(7600 mils, 1400 mils): Symbol R2 [R_Small]
+[lib_symbol_mismatch]: Symbol "XC6206PxxxMR" stimmt nicht mit Kopie in Bibliothek "Regulator_Linear" überein
+    ; warning
+    @(7750 mils, 3700 mils): Symbol U3 [XC6206PxxxMR]
+[lib_symbol_mismatch]: Symbol "+3.3V" stimmt nicht mit Kopie in Bibliothek "power" überein
+    ; warning
+    @(8800 mils, 1450 mils): Symbol #PWR020 [+3.3V]
+[lib_symbol_mismatch]: Symbol "+3.3V" stimmt nicht mit Kopie in Bibliothek "power" überein
+    ; warning
+    @(8250 mils, 3600 mils): Symbol #PWR030 [+3.3V]
+[lib_symbol_issues]: Die aktuelle Konfiguration enthält nicht die Symbolbibliothek "USBCereal"
+    ; warning
+    @(9550 mils, 1900 mils): Symbol U2 [CH340C]
+[endpoint_off_grid]: Symbolpin oder Verbindungsende liegt nicht auf Verbindungsraster
+    ; warning
+    @(10475 mils, 1150 mils): Symbol #PWR023 Versteckter Pin 1 [+3V3, Stromversorgung, Linie]
+[endpoint_off_grid]: Symbolpin oder Verbindungsende liegt nicht auf Verbindungsraster
+    ; warning
+    @(10475 mils, 1150 mils): Vertikale Verbindung, Länge 50 mils
+[lib_symbol_mismatch]: Symbol "+3.3V" stimmt nicht mit Kopie in Bibliothek "power" überein
+    ; warning
+    @(10475 mils, 1150 mils): Symbol #PWR023 [+3.3V]
+[endpoint_off_grid]: Symbolpin oder Verbindungsende liegt nicht auf Verbindungsraster
+    ; warning
+    @(10475 mils, 1200 mils): Symbol R3 Pin 1 [Passiv, Linie]
+[lib_symbol_mismatch]: Symbol "R_Small" stimmt nicht mit Kopie in Bibliothek "Device" überein
+    ; warning
+    @(10475 mils, 1300 mils): Symbol R3 [R_Small]
+[endpoint_off_grid]: Symbolpin oder Verbindungsende liegt nicht auf Verbindungsraster
+    ; warning
+[lib_symbol_mismatch]: Symbol "LED_Small" stimmt nicht mit Kopie in Bibliothek "Device" überein
+    ; warning
+[endpoint_off_grid]: Symbolpin oder Verbindungsende liegt nicht auf Verbindungsraster
+    ; warning
+    @(10475 mils, 1400 mils): Vertikale Verbindung, Länge 100 mils
+[endpoint_off_grid]: Symbolpin oder Verbindungsende liegt nicht auf Verbindungsraster
+    ; warning
+[endpoint_off_grid]: Symbolpin oder Verbindungsende liegt nicht auf Verbindungsraster
+    ; warning
+    @(9950 mils, 1500 mils): Horizontale Verbindung, Länge 525 mils
+[lib_symbol_mismatch]: Symbol "+3.3V" stimmt nicht mit Kopie in Bibliothek "power" überein
+    ; warning
+    @(10800 mils, 1150 mils): Symbol #PWR024 [+3.3V]
+[lib_symbol_mismatch]: Symbol "R_Small" stimmt nicht mit Kopie in Bibliothek "Device" überein
+    ; warning
+    @(10800 mils, 1300 mils): Symbol R4 [R_Small]
+[endpoint_off_grid]: Symbolpin oder Verbindungsende liegt nicht auf Verbindungsraster
+    ; warning
+[lib_symbol_mismatch]: Symbol "LED_Small" stimmt nicht mit Kopie in Bibliothek "Device" überein
+    ; warning
+[endpoint_off_grid]: Symbolpin oder Verbindungsende liegt nicht auf Verbindungsraster
+    ; warning
+    @(10800 mils, 1400 mils): Vertikale Verbindung, Länge 200 mils
+[endpoint_off_grid]: Symbolpin oder Verbindungsende liegt nicht auf Verbindungsraster
+    ; warning
+
+ ** ERC-Meldungen: 25  Fehler 2  Warnungen 23

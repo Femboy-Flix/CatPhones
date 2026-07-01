@@ -27,14 +27,15 @@
 //I2SStream i2s;
 //BluetoothA2DPSink a2dp_sink(i2s);
 I2SStream i2s;
-//PsychoacousticProcessor audioProcessor(48000.0f);
-AudioProcessingChain audioChain(i2s ); //audioProcessor
+PsychoacousticProcessor audioProcessor(48000.0f);
+AudioProcessingChain audioChain(i2s, audioProcessor);
 BluetoothA2DPSink a2dp_sink(audioChain);
 
 // Psychoacoustic audio processor
 //PsychoacousticProcessor audioProcessor(48000.0f);
 
-
+// WS2812 Rainbow effect
+WS2812Rainbow ws2812(WS2812_NUM_LEDS, WS2812_PIN);
 
 // Button states
 bool lastPlayPauseState = HIGH;
@@ -71,18 +72,21 @@ void setup()
   i2s.begin(cfg);
 
   // Start Bluetooth sink
-  a2dp_sink.start("Catphones");
+  a2dp_sink.start("Cat-Phones");
   a2dp_sink.set_volume(100);
 
 
   // Configure psychoacoustic processing
-//audioProcessor.setBassBoost(1.9f);           // +90% bass boost - very prominent
- // audioProcessor.setPresencePeak(1.0f);       // +20% presence peak - strong clarity
- // audioProcessor.setCompressorThreshold(0.5f);  // Very aggressive compression
-  //audioProcessor.setCompressorRatio(2.0f);     // High compression ratio
-  //audioProcessor.setMasterGain(2.4f);          // +140% overall gain boost
-  //audioProcessor.setEnabled(true);
+  audioProcessor.setBassBoost(1.9f);           // +90% bass boost - very prominent
+  audioProcessor.setPresencePeak(1.0f);       // +20% presence peak - strong clarity
+  audioProcessor.setCompressorThreshold(0.5f);  // Very aggressive compression
+  audioProcessor.setCompressorRatio(2.0f);     // High compression ratio
+  audioProcessor.setMasterGain(2.4f);          // +140% overall gain boost
+  audioProcessor.setEnabled(true);
 
+  // Initialize WS2812
+  ws2812.begin();
+  ws2812.setBrightness(WS2812_BRIGHTNESS);
 
 }
 
@@ -169,8 +173,8 @@ void loop()
   lastVolumeDownState = currentVolumeDownState;
 
   // Update WS2812 rainbow effect
- 
+  ws2812.loop();
+
   // Short delay to debounce buttons
   delay(50);
 }
-
